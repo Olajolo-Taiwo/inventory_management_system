@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="inventory.js"></script>
+  <h1>Inventory Management System</h1>
+
+  <div class="form-container">
+    <h2>Add Product</h2>
+    <input type="text" id="productId" placeholder="Product ID">
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <input type="number" id="productQuantity" placeholder="Quantity">
+    <button onclick="handleAddProduct()">Add Product</button>
+  </div>
+
+  <div class="form-container">
+    <h2>Update Stock</h2>
+    <input type="text" id="updateId" placeholder="Product ID">
+    <input type="number" id="updateAmount" placeholder="Amount (+/-)">
+    <button onclick="handleUpdateStock()">Update Stock</button>
+  </div>
+
+  <div class="form-container">
+    <h2>Remove Product</h2>
+    <input type="text" id="removeId" placeholder="Product ID">
+    <button onclick="handleRemoveProduct()">Remove</button>
+  </div>
+
+  <div class="report">
+    <h2>Inventory Report</h2>
+    <button onclick="generateReport()">Generate Report</button>
+    <pre id="reportOutput"></pre>
+  </div>
+
+  <script src="timi.js"></script>
 </body>
 </html>
